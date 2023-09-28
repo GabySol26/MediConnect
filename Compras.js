@@ -33,7 +33,7 @@
 
             editCompra(idCompra, Fecha, Cantidad, Precio, total, IdTratamiento, IdPaciente, IdMedicamento) {
 
-              axios.get('http://3.145.13.45:5000/compra/' + idCompra)
+              axios.get('http://52.15.253.41:5000/compra/' + idCompra)
               .then(response => {
                 this.eidCompra = idCompra;
                 this.eFecha = Fecha;

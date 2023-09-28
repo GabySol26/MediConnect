@@ -20,7 +20,7 @@ var app = new Vue({
         },
 
         getCitas() {
-            axios.get('http://127.0.0.1:5000/citas')
+            axios.get('http://52.15.253.41:5000/citas')
                 .then(response => {
                     console.log(response)
                     this.citas = response.data.Citas
@@ -31,9 +31,9 @@ var app = new Vue({
         },
 
         onSubmit() {
-            axios.get('http://127.0.0.1:5000/paciente/${this.IdPaciente}')
-            axios.get('http://127.0.0.1:5000/schedule/${this.IdSchedule}')
-            axios.post('http://127.0.0.1:5000/cita', {
+            axios.get('http://52.15.253.41:5000/paciente/${this.IdPaciente}')
+            axios.get('http://52.15.253.41:5000/schedule/${this.IdSchedule}')
+            axios.post('http://52.15.253.41:5000/cita', {
               IdPaciente: this.IdPaciente,
               IdSchedule: this.IdSchedule
             })
@@ -49,7 +49,7 @@ var app = new Vue({
         },
 
         editCita(idCita, IdPaciente, IdSchedule) {
-          axios.get('http://127.0.0.1:5000/cita/' + idCita)
+          axios.get('http://52.15.253.41:5000/cita/' + idCita)
             .then(response => {
               this.eidCita = idCita;
               this.IdPaciente = IdPaciente;
@@ -62,7 +62,7 @@ var app = new Vue({
         },
 
         onUpdate() {
-          const url = 'http://127.0.0.1:5000/cita/' + this.eidCita;
+          const url = 'http://52.15.253.41:5000/cita/' + this.eidCita;
 
           axios.put(url,{
             IdPaciente: this.IdPaciente,
