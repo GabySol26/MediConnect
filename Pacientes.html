@@ -126,7 +126,7 @@
             },
 
             onSubmit(){
-                axios.post('http://3.145.13.45:5000/paciente', {
+                axios.post('https://3.145.13.45:5000/paciente', {
                     nombreP: this.nombreP,
                     apellidoPP: this.apellidoPP,
                     apellidoMP: this.apellidoMP,
@@ -149,7 +149,7 @@
 
             getPacientes() {
                 axios({
-                    url:'http://3.145.13.45:5000/pacientes',
+                    url:'https://3.145.13.45:5000/pacientes',
                     method: 'get',
                 })
                 .then(response => {
@@ -162,7 +162,7 @@
             },
 
             editPaciente(idPaciente, nombreP, apellidoPP, apellidoMP, dniP, generoP, telefonoP, fnacimientoP, emailP) {
-                axios.get('http://3.145.13.45:5000/paciente/' + idPaciente)
+                axios.get('https://3.145.13.45:5000/paciente/' + idPaciente)
                 .then(res => {
                     console.log(res.data);
                     this.eidPaciente = idPaciente
@@ -182,7 +182,7 @@
             },
 
             onUpdate(){
-                axios.put('http://3.145.13.45:5000/paciente/' + this.eidPaciente,{
+                axios.put('https://3.145.13.45:5000/paciente/' + this.eidPaciente,{
                     nombreP: this.enombreP,
                     apellidoPP: this.eapellidoPP,
                     apellidoMP: this.eapellidoMP,
