@@ -60,7 +60,7 @@
             },
 
             getMedicos() {
-                axios.get('https://3.145.13.45:5000/medicamentos')
+                axios.get('http://52.15.253.41:5000/medicamentos')
                     .then(response => {
                         console.log(response)
                         this.meds = response.data.Medicamento
