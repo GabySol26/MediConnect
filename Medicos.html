@@ -67,7 +67,7 @@
             },
 
             getMedicos() {
-                axios.get('http://127.0.0.1:5000/medicos')
+                axios.get('http://3.145.13.45:5000/medicos')
                     .then(response => {
                         console.log(response)
                         this.medics = response.data.Medicos

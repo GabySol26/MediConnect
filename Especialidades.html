@@ -129,7 +129,7 @@
             },
 
             getTratamientos() {
-                axios.get('http://127.0.0.1:5000/especialidadmedicos')
+                axios.get('http://3.145.13.45:5000/especialidadmedicos')
                     .then(response => {
                         console.log(response)
                         this.esps = response.data.EspecialidadMedico;
@@ -140,7 +140,7 @@
             },
 
             onSubmit(){
-                axios.post('http://127.0.0.1:5000/especialidadmedico', {
+                axios.post('http://3.145.13.45:5000/especialidadmedico', {
                   nombreM: this.nombreM,
                   apellidoPM: this.apellidoPM,
                   apellidoMM: this.apellidoMM,
