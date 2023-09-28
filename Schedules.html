@@ -143,7 +143,7 @@
             },
 
             getSchedule() {
-                axios.get('http://127.0.0.1:5000/schedules')
+                axios.get('http://3.145.13.45:5000/schedules')
                     .then(response => {
                         console.log(response)
                         this.schs = response.data.Schedule;
@@ -154,9 +154,9 @@
             },
 
             onSubmit(){
-                axios.get('http://127.0.0.1:5000/medico/${this.IdMedico}')
-                axios.get('http://127.0.0.1:5000/especialidad/${this.IdEspecialidad}')
-                axios.post('http://127.0.0.1:5000/schedule', {
+                axios.get('http://3.145.13.45:5000/medico/${this.IdMedico}')
+                axios.get('http://3.145.13.45:5000/especialidad/${this.IdEspecialidad}')
+                axios.post('http://3.145.13.45:5000/schedule', {
                     Fecha: this.Fecha,
                     Hora: this.Hora,
                     IdMedico: this.IdMedico,
@@ -174,7 +174,7 @@
             },
 
             editsch(IdSchedule, Fecha, Hora, IdMedico, IdEspecialidad){
-                axios.get('http://127.0.0.1:5000/schedule/' + IdSchedule)
+                axios.get('http://3.145.13.45:5000/schedule/' + IdSchedule)
                 .then(res => {
                     this.eIdSchedule = IdSchedule
                     this.eFecha = Fecha
@@ -189,7 +189,7 @@
             },
 
             onUpdate(){
-                const url = 'http://127.0.0.1:5000/schedule/' + this.eIdSchedule;
+                const url = 'http://3.145.13.45:5000/schedule/' + this.eIdSchedule;
                 axios.put(url, {
                     Fecha: this.eFecha,
                     Hora: this.eHora,

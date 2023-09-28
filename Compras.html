@@ -181,7 +181,7 @@
             },
 
             getTratamientos() {
-                axios.get('http://127.0.0.1:5000/compras')
+                axios.get('http://3.145.13.45:5000/compras')
                     .then(response => {
                         console.log(response)
                         this.compras = response.data.Compra
@@ -211,10 +211,10 @@
 
             onSubmit() {
                 this.calcular();
-              axios.get('http://127.0.0.1:5000/tratamiento/${this.IdTratamiento}')
-              axios.get('http://127.0.0.1:5000/paciente/${this.IdPaciente}')
-              axios.get('http://127.0.0.1:5000/medicamento/${this.IdMedicamento}')
-              axios.post('http://127.0.0.1:5000/compra',{
+              axios.get('http://3.145.13.45:5000/tratamiento/${this.IdTratamiento}')
+              axios.get('http://3.145.13.45:5000/paciente/${this.IdPaciente}')
+              axios.get('http://3.145.13.45:5000/medicamento/${this.IdMedicamento}')
+              axios.post('http://3.145.13.45:5000/compra',{
                 Fecha: this.Fecha,
                 Cantidad: this.Cantidad,
                 Precio: this.Precio,
@@ -238,7 +238,7 @@
 
             editCompra(idCompra, Fecha, Cantidad, Precio, total, IdTratamiento, IdPaciente, IdMedicamento) {
 
-              axios.get('http://127.0.0.1:5000/compra/' + idCompra)
+              axios.get('http://3.145.13.45:5000/compra/' + idCompra)
               .then(response => {
                 this.eidCompra = idCompra;
                 this.eFecha = Fecha;
@@ -257,7 +257,7 @@
 
             onUpdate() {
               this.calcular1();
-              const url = 'http://127.0.0.1:5000/compra/' + this.eidCompra;
+              const url = 'http://3.145.13.45:5000/compra/' + this.eidCompra;
               
               axios.put(url, {
                 Fecha: this.eFecha,
